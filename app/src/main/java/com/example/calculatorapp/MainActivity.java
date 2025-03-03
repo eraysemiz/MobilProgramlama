@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public double calculateFactorial(double num)
+    public int calculateFactorial(int num)
     {
-        double fact = 1;
+        int fact = 1;
 
         for (int i = 1; i <= num; i++)
         {
@@ -66,8 +66,14 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        num1 = Double.parseDouble(num1S);
-        num2 = Double.parseDouble(num2S);
+        if (!num1S.isEmpty()) {
+            num1 = Double.parseDouble(num1S);
+        }
+
+        // Handle the case where num2 is empty (no second number)
+        if (!num2S.isEmpty()) {
+            num2 = Double.parseDouble(num2S);
+        }
 
         System.out.println("Num1 : " + num1 + "\nNum2 : " + num2);
 
@@ -82,9 +88,9 @@ public class MainActivity extends AppCompatActivity {
         else if (operation == '^')
             return Math.pow(num1, num2);
         else if (operation == '!')
-            return (calculateFactorial(num1));
+            return (calculateFactorial((int) num1));
         else if (operation == '√')
-            return Math.sqrt(num1);
+            return Math.sqrt(num2);
 
         return 0;
     }
