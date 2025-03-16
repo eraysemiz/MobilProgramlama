@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:id="@+id/textViewScore2"
+        android:layout_width="117dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="118dp"
+        android:text="Sonuçlar:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRestart"
+        app:layout_constraintEnd_toStartOf="@+id/textViewScore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUser" />
+
+    <TextView
+        android:id="@+id/textViewScore"
+        android:layout_width="117dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="118dp"
+        android:text="s"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRestart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewScore2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUser" />
+
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="156dp"
+        android:text="Anasayfa"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRestart" />
+
+    <Button
+        android:id="@+id/buttonRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginEnd="155dp"
+        android:text="Yeni Quiz"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewScore2" />
+
+    <TextView
+        android:id="@+id/textViewUser"
+        android:layout_width="94dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="142dp"
+        android:layout_marginEnd="159dp"
+        android:text="Kullanıcı"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
