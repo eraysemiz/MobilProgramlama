@@ -5,17 +5,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    android:tileMode="repeat"
     tools:context=".QuizSelectionActivity">
+
 
     <Button
         android:id="@+id/quizButton2"
-        android:layout_width="160dp"
+        android:layout_width="200dp"
         android:layout_height="120dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="62dp"
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="25dp"
-        android:text="quiz2"
+        android:background="@drawable/genelkultur"
+        android:clipToOutline="true"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/quizButton4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,13 +29,13 @@
 
     <Button
         android:id="@+id/quizButton5"
-        android:layout_width="160dp"
+        android:layout_width="200dp"
         android:layout_height="120dp"
         android:layout_marginStart="35dp"
         android:layout_marginTop="22dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginBottom="62dp"
-        android:text="quiz5"
+        android:background="@drawable/sinema"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/quizButton6"
@@ -41,13 +45,13 @@
 
     <Button
         android:id="@+id/quizButton4"
-        android:layout_width="160dp"
+        android:layout_width="200dp"
         android:layout_height="120dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="22dp"
-        android:text="quiz4"
+        android:background="@drawable/spor"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/quizButton6"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,13 +61,13 @@
 
     <Button
         android:id="@+id/quizButton6"
-        android:layout_width="160dp"
+        android:layout_width="200dp"
         android:layout_height="120dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="62dp"
-        android:text="quiz6"
+        android:background="@drawable/iq"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,13 +77,13 @@
 
     <Button
         android:id="@+id/quizButton3"
-        android:layout_width="160dp"
+        android:layout_width="200dp"
         android:layout_height="120dp"
         android:layout_marginStart="35dp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginBottom="22dp"
-        android:text="quiz3"
+        android:background="@drawable/bilim"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/quizButton5"
         app:layout_constraintEnd_toStartOf="@+id/quizButton4"
@@ -89,17 +93,46 @@
 
     <Button
         android:id="@+id/quizButton1"
-        android:layout_width="160dp"
+        android:layout_width="200dp"
         android:layout_height="120dp"
         android:layout_marginStart="35dp"
         android:layout_marginTop="62dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginBottom="25dp"
-        android:text="quiz1"
+        android:background="@drawable/tr"
         android:textColor="@color/black"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/quizButton3"
         app:layout_constraintEnd_toStartOf="@+id/quizButton2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="@color/black" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/general_button"
+        android:text="Çıkış Yap"
+        app:layout_constraintTop_toBottomOf="@+id/quizButton5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scoreBoardButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/scoreBoardButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/general_button"
+        android:text="Geçmiş Skorlar"
+        app:layout_constraintTop_toBottomOf="@+id/quizButton5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonLogout"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

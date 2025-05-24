@@ -5,67 +5,109 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background4"
     tools:context=".QuizActivity">
 
-    <TextView
-        android:id="@+id/textViewQuestion"
-        android:layout_width="258dp"
-        android:layout_height="46dp"
-        android:text="Soru"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardQuestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="@android:color/white"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="259dp"
-        android:layout_height="308dp"
-        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintVertical_bias="0.4">
 
-        <RadioButton
-            android:id="@+id/rbQuestion1"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:text="cevap1" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <RadioButton
-            android:id="@+id/rbQuestion2"
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:text="cevap2" />
+            <TextView
+                android:id="@+id/textViewQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Soru"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:lineSpacingExtra="4dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="14sp"
+                android:autoSizeMaxTextSize="22sp"
+                android:autoSizeStepGranularity="1sp"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
 
-        <RadioButton
-            android:id="@+id/rbQuestion3"
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:text="cevap3" />
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/rbQuestion4"
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:text="cevap4" />
+                <RadioButton
+                    android:id="@+id/rbQuestion1"
+                    style="@style/QuizRadioButton" />
 
-    </RadioGroup>
+                <RadioButton
+                    android:id="@+id/rbQuestion2"
+                    style="@style/QuizRadioButton" />
 
+                <RadioButton
+                    android:id="@+id/rbQuestion3"
+                    style="@style/QuizRadioButton" />
+
+                <RadioButton
+                    android:id="@+id/rbQuestion4"
+                    style="@style/QuizRadioButton" />
+            </RadioGroup>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- NEXT BUTTON -->
     <Button
         android:id="@+id/buttonNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="163dp"
-        android:layout_marginBottom="127dp"
-        android:text="Next"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/general_button"
+        android:text="Sonraki Soru"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:letterSpacing="0.02"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardQuestion"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGoToQuizSelection"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- GO BACK BUTTON -->
+    <Button
+        android:id="@+id/buttonGoToQuizSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/general_button"
+        android:backgroundTint="@color/red"
+        android:layout_marginTop="8dp"
+        android:text="Quizlere Dön"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:letterSpacing="0.02"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
