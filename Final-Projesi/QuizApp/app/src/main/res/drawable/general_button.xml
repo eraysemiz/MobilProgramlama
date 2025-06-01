@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- When the button is pressed, apply a scale animation -->
     <item android:state_pressed="true">
         <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
             <item>
                 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-                    <solid android:color="@color/blue"/> <!-- Button color when pressed -->
-                    <corners android:radius="16dp"/> <!-- Rounded corners -->
-                    <size android:width="200dp" android:height="60dp"/> <!-- Button size -->
+                    <solid android:color="@color/blue"/>
+                    <corners android:radius="16dp"/>
+                    <size android:width="200dp" android:height="60dp"/>
                 </shape>
             </item>
         </layer-list>
     </item>
 
-    <!-- Default state (normal state) -->
     <item>
         <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
             <item>
                 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-                    <solid android:color="@color/blue"/> <!-- Normal button color -->
-                    <corners android:radius="16dp"/> <!-- Rounded corners -->
-                    <size android:width="200dp" android:height="60dp"/> <!-- Button size -->
+                    <solid android:color="@color/blue"/>
+                    <corners android:radius="16dp"/>
+                    <size android:width="200dp" android:height="60dp"/>
                 </shape>
             </item>
         </layer-list>

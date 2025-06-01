@@ -46,7 +46,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
                 +     QUIZ_TITLE + " TEXT NOT NULL"
                 + ");";
         db.execSQL(createQuizTable);
-        // questions tablosu
+
         String createQuestionTable = ""
                 + "CREATE TABLE IF NOT EXISTS " + TABLE_QUESTION + " ("
                 +     QUESTION_ID          + " INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -80,7 +80,6 @@ public class DatabaseManager extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // versiyon yükseldiğinde önceki tabloları sil, sonra yeniden oluştur
         onCreate(db);
     }
 
@@ -153,7 +152,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
 
                 questions.add(
                         new Question(
-                                quizId,        // quizID
+                                quizId,
                                 text,
                                 opt1,
                                 opt2,
@@ -172,7 +171,6 @@ public class DatabaseManager extends SQLiteOpenHelper {
     public boolean registerUser(String username, String password) {
         SQLiteDatabase db = getWritableDatabase();
 
-        // 1) Kullanıcı adı var mı diye rawQuery ile kontrol et
         Cursor c = db.rawQuery(
                 "SELECT 1 FROM " + TABLE_USER + " WHERE " + USERNAME + " = ?",
                 new String[]{ username }
@@ -184,7 +182,6 @@ public class DatabaseManager extends SQLiteOpenHelper {
             return false;
         }
 
-        // 2) execSQL ile ekle
         String insertSql =
                 "INSERT INTO " + TABLE_USER +
                         " (" + USERNAME + ", " + PASSWORD + ")" +

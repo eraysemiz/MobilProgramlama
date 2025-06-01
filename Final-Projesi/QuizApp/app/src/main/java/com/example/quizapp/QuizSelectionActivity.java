@@ -29,7 +29,6 @@ public class QuizSelectionActivity extends AppCompatActivity {
             return insets;
         });
 
-        //DatabaseManager db = new DatabaseManager(this);
 
         Button quiz1 = findViewById(R.id.quizButton1);
         Button quiz2 = findViewById(R.id.quizButton2);
@@ -55,7 +54,7 @@ public class QuizSelectionActivity extends AppCompatActivity {
         boolean initialized = prefs.getBoolean("db_initialized", false);
         if (!initialized) {
             DatabaseManager db = new DatabaseManager(this);
-            setDB(db);  // içinde addQuiz ve addQuestions yapan metot
+            setDB(db);
             prefs.edit().putBoolean("db_initialized", true).apply();
         }
 
