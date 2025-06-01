@@ -134,10 +134,11 @@ public class QuizActivity extends AppCompatActivity {
         String username = prefs.getString("username", null);
         String quizTitle = db.getQuizTitleById(quizId);
         int score = 0;
+        int iq = -1;
 
         if (quizId == 6)
         {
-            int iq = calculateIQ(correctAnswers);
+            iq = calculateIQ(correctAnswers);
             intent.putExtra("IQ_SCORE", iq);
             score = iq;
         }

@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/textViewScores"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="Skorlar burada görünecek..." />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewScores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Skorlar burada görünecek..."
+                android:textSize="16sp" />
+        </LinearLayout>
     </ScrollView>
 
     <Button
@@ -31,5 +39,5 @@
         android:layout_height="wrap_content"
         android:background="@drawable/general_button"
         android:text="Quiz Seçim Ekranına Dön"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp" />
 </LinearLayout>

@@ -36,7 +36,7 @@ public class ResultActivity extends AppCompatActivity {
         buttonRestart = findViewById(R.id.buttonRestart);
         buttonScoreboard = findViewById(R.id.buttonScoreboard);
 
-        int iq = getIntent().getIntExtra("IQ_SCORE", 0);
+        int iq = getIntent().getIntExtra("IQ_SCORE", -1);
 
         if (iq != -1) {
             // Eğer IQ gönderilmişse
@@ -79,10 +79,5 @@ public class ResultActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-        Intent intent = new Intent(ResultActivity.this, Scoreboard.class);
-        startActivity(intent);
-
     }
 }
